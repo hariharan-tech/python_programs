@@ -4,28 +4,38 @@
 <head>
   <meta charset="utf-8">
   <title>Most of the Python Programs</title>
+
+  <!-- CSS Styling -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <!-- Custom Styling -->
   <link rel="stylesheet" href="resources/styles.css">
 </head>
 
 <body>
-  <!-- _____________________________NAVBAR___________________________ -->
-  <nav>
-    <ul class="navbar">
-      <li><a href="#">Home</a></li>
-      <li><a href="#matrix">Matrix Programs</a></li>
-      <li><a href="#search">Searching Programs</a></li>
-      <li><a href="#sorting">Sorting Programs</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  </nav>
-  <!-- _____________________________HOME___________________________ -->
-  <section id="home" class="homecss">
-    <!-- _____________________________Primeno___________________________ -->
-    <div class="content-box">
-      <h3>Prime Number check program: </h3>
-      <div class="codecontainer">
-        <code class="codebg">
-          <pre>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#matrix">Matrix</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#searching">Searching</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section id="home">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <span class="program-title">Prime Number check program:</span>
+              <div class="code-container">
+                <code>
+                  <pre>
 print("Program to check if its a Prime Number or not.")
 a=int(input("Enter the Number:"))
 i=1
@@ -34,20 +44,18 @@ while i<= a/2:
     if(a%i==0):
         count=count+1
     i=i+1
-
 if(count>2):
     print("Not a Prime Number")
 else:
     print("It is a Prime Number")</pre>
-        </code>
-      </div>
-    </div>
-    <!-- _____________________________Factprial___________________________ -->
-    <div class="content-box">
-    <h3>Factorial</h3>
-    <div class="codecontainer">
-      <code class="codebg">
-        <pre>
+                </code>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <span class="program-title">Factorial</span>
+              <div class="code-container">
+                <code>
+                  <pre>
 a=int(input("Enter the number for finding factorial"))
 fact=1
 i=a
@@ -55,15 +63,14 @@ while i>0:
     fact=fact*i
     i=i-1
 print("Factorial of ",a," is ",fact)</pre>
-      </code>
-    </div>
-    </div>
-<!-- _____________________________GCD___________________________ -->
-    <div class="content-box">
-      <h3>GCD of 2 numbers</h3>
-      <div class="codecontainer">
-        <code class="codebg">
-          <pre>
+                </code>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <span class="program-title">GCD of 2 numbers</span>
+              <div class="code-container">
+                <code>
+                  <pre>
 print("Program to find GCD of 2 Numbers:")
 a=int(input("Enter the 1st Number: "))
 b=int(input("Enter the 2nd Number: "))
@@ -76,19 +83,16 @@ if (a>0) & (b>0):
         i = i + 1
     print("The GCD for  " ,a, "and" ,b, "is :" ,gcd)
 else:
-    print("GCD can't be found for Negative Numbers!!")
-</pre>
-        </code>
-      </div>
-    </div>
-    <!-- _____________________________roots___________________________ -->
-    <div class="content-box">
-      <h3>Real Roots of Quadratic Equation</h3>
-      <div class="codecontainer">
-        <code class="codebg">
-          <pre>
+    print("GCD can't be found for Negative Numbers!!")</pre>
+                </code>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <span class="program-title">Real Roots of Quadratic Equation</span>
+              <div class="code-container">
+                <code>
+                  <pre>
 import math
-# Program to Find Roots of the Quadratic Equation
 print("Make sure the equation is in the form ax^2 + bx + c = 0")
 a=float(input("Enter the Variable a :"))
 b=float(input("Enter the Variable b :"))
@@ -100,21 +104,19 @@ if d >=0 :
     root2= (b-math.sqrt(d))/(2*a)
     print("The Roots are real and they are:" ,root1, " and " ,root2)
 else:
-    print("The roots are Imaginary")
-</pre>
-        </code>
-      </div>
-    </div>
-    <!-- _____________________________Fibonacci___________________________ -->
-    <div class="content-box">
-      <h3>Fibonnaci Series</h3>
-      <div class="codecontainer">
-        <code class="codebg">
-          <pre>
+    print("The roots are Imaginary")</pre>
+                </code>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <span class="program-title">Fibonnaci Series</span>
+              <div class="code-container">
+                <code>
+                  <pre>
 first=0
 second=1
 third=1
-n=int(input("Enter the Number upto which the Fibonacci series has to be found"))
+n=int(input("Enter the nth number to find Fibonacci series:"))
 i=0
 swap=0
 print(first)
@@ -125,17 +127,15 @@ while (i < n):
     print(third)
     first=second
     second=third
-    i+=1
-</pre>
-        </code>
-      </div>
-    </div>
-<!-- _____________________________Generate Prime Nos___________________________ -->
-    <div class="content-box">
-      <h3>Generate Prime Numbers in given range</h3>
-      <div class="codecontainer">
-        <code class="codebg">
-          <pre>
+    i+=1 </pre>
+                </code>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <span class="program-title">Generate Prime Numbers in given range</span>
+              <div class="code-container">
+                <code>
+                  <pre>
 print("List of Prime Number less than 100 : ")
 for i in range(2,101):
     f=2
@@ -145,17 +145,15 @@ for i in range(2,101):
             count += 1
         f+=1
     if(count < 3):
-        print(i)
-</pre>
-        </code>
-      </div>
-    </div>
-    <!-- _____________________________Palindrome or not___________________________ -->
-    <div class="content-box">
-      <h3>Palindrome or not?</h3>
-      <div class="codecontainer">
-        <code class="codebg">
-          <pre>
+        print(i) </pre>
+                </code>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <span class="program-title">Palindrome or not?</span>
+              <div class="code-container">
+                <code>
+                  <pre>
 a=input("Enter a Number : ")
 n=len(a)
 b=str()
@@ -165,21 +163,21 @@ while n>0:
 if a==b:
     print(a,"Is a Palindrome")
 else:
-    print(a, "Is not a Palindrome")
-</pre>
-        </code>
-      </div>
-    </div>
-  </section>
-
-  <section id="matrix">
-    <!-- _____________________________Matrixadd___________________________ -->
-    <div class="content-box">
-      <h3>Additon of Square Matrix</h3>
-      <h5>Subtraction is also same, just change c.append(a[i][j]+b[i][j]) to c.append(a[i][j]-b[i][j])</h5>
-      <div class="codecontainer">
-        <code class="codebg">
-          <pre>
+    print(a, "Is not a Palindrome")</pre>
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="matrix">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <span class="program-title">Additon of Square Matrix</span>
+              <div class="code-container">
+                <code>
+                  <pre>
 def matrix(r, c):
     col = []
     for i in range(0, r):
@@ -212,17 +210,56 @@ c=sum(a,b)
 
 for i in range(0, r):
     for j in range(0, c):
-        print(c[i][j])
-</pre>
-        </code>
-      </div>
-    </div>
-    <!-- _____________________________Matrixmul___________________________ -->
-    <div class="content-box">
-      <h3>Matrix Multiplication</h3>
-      <div class="codecontainer">
-        <code class="codebg">
-          <pre>
+        print(c[i][j])</pre>
+                </code>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <span class="program-title">Subtraction of Square Matrix</span>
+              <div class="code-container">
+                <code>
+                  <pre>
+def matrix(r, c):
+    col = []
+    for i in range(0, r):
+        row = []
+        for j in range(0, c):
+            print("Enter the ", i, j, "Element :", end=" ")
+            temp = input()
+            row.append(temp)
+        col.append(row)
+    return col
+
+
+def sub(a,b):
+    Sub=[]
+    for i in range(len(a)):
+        c=[]
+        for j in range(len(a[0])):
+            c.append(a[i][j]-b[i][j])
+        Sub.append(c)
+    return Sub
+
+
+r = int(input("Enter the Number of rows in the Matrix"))
+c = int(input("Enter the Number of Columns in the Matrix"))
+print("Enter the Matrix 1 : ")
+a = matrix(r, c)
+print("Enter the Matrix 2 : ")
+b = matrix(r, c)
+c=sum(a,b)
+
+for i in range(0, r):
+    for j in range(0, c):
+        print(c[i][j])</pre>
+                </code>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <span class="program-title">Matrix Multiplication</span>
+              <div class="code-container">
+                <code>
+                  <pre>
 n=int(input("Enter the index of the square Matrix: "))
 print("Enter the first ",n,"x",n," Matrix: ")
 A=[]
@@ -254,19 +291,22 @@ for i in range(0,n):
         for k in range(0,n):
             result[i][j] += (A[i][k] * B[k][j])
 for r in result:
-    print(r)
-          </pre>
-        </code>
-      </div>
-    </div>
-  </section>
-  <section id="search">
-    <!-- _____________________________Linear Search___________________________ -->
-    <div class="content-box">
-    <h3>Linear Search</h3>
-    <div class="codecontainer">
-      <code class="codebg">
-        <pre>n=int(input("Enter the Number of Elements that are going to be entered: "))
+    print(r)</pre>
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="searching">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <span class="program-title">Linear Search</span>
+              <div class="code-container">
+                <code>
+                  <pre>
+n=int(input("Enter the Number of Elements that are going to be entered: "))
 l1=[]
 for i in range(n):
     l1.append(input("Enter the "+str(i+1)+" Element: "))
@@ -281,17 +321,15 @@ while True:
     print("The Element ",f," is found ",count," times at the positions ",pos,".")
     opt=input("Do you want to Continue?(y/n)")
     if opt=="n":
-        break
-</pre>
-      </code>
-    </div>
-  </div>
-  <!-- _____________________________Binary Search___________________________ -->
-  <div class="content-box">
-  <h3>Binary Search</h3>
-  <div class="codecontainer">
-    <code class="codebg">
-      <pre>
+        break</pre>
+                </code>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <span class="program-title">Binary Search</span>
+              <div class="code-container">
+                <code>
+                  <pre>
 def binarySearch(arr, l, r, x):
   if r >= l:
       mid = l + (r - l) // 2
@@ -321,26 +359,17 @@ while True:
     opt=input("Do you want to Continue?(y/n)")
     if opt=="n":
         break</pre>
-    </code>
-  </div>
-</div>
-  </section>
-  <section id="sorting">
-    <!-- _____________________________Bubble sort___________________________ -->
-    <div class="content-box">
-    <h1>Sorting is coming soon!</h1>
-    <!-- <div class="codecontainer">
-      <code class="codebg">
-        <pre></pre>
-      </code>
-    </div>
-    </div> -->
-  </section>
-  <footer id="about">
-    <h2>About coming soon..</h2>
-    <h4>You can suggest more ideas or programs!</h4>
-    <h6>Thanks to GOD for helping me remember the knowledge of web dev</h6>
-  </footer>
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footers">
+        <h4>You can suggest more ideas or programs!</h4>
+      </section>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
 
 </html>
